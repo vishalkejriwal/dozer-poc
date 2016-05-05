@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+    <configuration>
+        <stop-on-errors>true</stop-on-errors>
+        <date-format>MM/dd/yyyy HH:mm</date-format>
+        <wildcard>true</wildcard>
+        <variables>
+            <variable name="ID">ACME-SALES</variable>
+        </variables>
+    </configuration>
+
+    <mapping>
+        <class-a>com.vishal.dozer.ShipmentDao</class-a>
+        <class-b>com.vishal.dozer.ShipmentDto</class-b>
+        <field custom-converter-param="${CUST_ID}">
+            <a>shipmentId</a>
+            <b>id</b>
+        </field>
+        <field>
+            <a>item.itemId</a>
+            <b>itemId</b>
+        </field>
+        <field>
+            <a>item.itemName</a>
+            <b>itemName</b>
+        </field>
+        <field>
+            <a>item.itemPrice</a>
+            <b>itemPrice</b>
+        </field>
+    </mapping>
+
+
+</mappings>
