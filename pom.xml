@@ -8,18 +8,84 @@
     <artifactId>com-vishal-dozer</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+
+    <properties>
+        <org.mapstruct.version>1.0.0.Final</org.mapstruct.version>
+    </properties>
+
+    <build>
+        <plugins>
+        <plugin> <!-- normally optional but here we use mapstruct so we need this step -->
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok-maven-plugin</artifactId>
+            <version>1.16.6.1</version>
+            <executions>
+                <execution>
+                    <phase>generate-sources</phase>
+                    <goals>
+                        <goal>delombok</goal>
+                    </goals>
+                    <configuration>
+                        <sourceDirectory>src/main/java/</sourceDirectory>
+                        <addOutputDirectory>true</addOutputDirectory>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.5.1</version>
+            <executions>
+                <execution>
+                    <id>default-compile</id>
+                    <goals>
+                        <goal>compile</goal>
+                    </goals>
+                    <configuration>
+                        <source>1.8</source> <!-- or higher, depending on your project -->
+                        <target>1.8</target> <!-- or higher, depending on your project -->
+                        <annotationProcessors>
+                            <annotationProcessor>org.mapstruct.ap.MappingProcessor</annotationProcessor>
+                        </annotationProcessors>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+        </plugins>
+    </build>
+
+
     <dependencies>
         <dependency>
-            <groupId>net.sf.dozer</groupId>
-            <artifactId>dozer</artifactId>
-            <version>5.4.0</version>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>${org.mapstruct.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+            <version>${org.mapstruct.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+            <version>4.11</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.16.8</version>
+            <scope>provided</scope>
         </dependency>
+
     </dependencies>
+
+
 
 
 </project>

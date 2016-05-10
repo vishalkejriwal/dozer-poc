@@ -1,39 +1,71 @@
 package com.vishal.dozer;
 
-import org.dozer.DozerBeanMapper;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by k.vishal on 07/04/16.
  */
+
+/*
 public class DozerDemo {
 
-    public static void main(String str[]) {
 
-        int iterate = 1, total = iterate*1000000;
-        long totalns,totalms,perns,perms;
-        ShipmentDao shipmentDao = new ShipmentDao();
+    public static void main(String str[]) throws MappingException {
+
+        //int iterate = 1, total = iterate*1000000;
+        //long totalns,totalms,perns,perms;
+        ShipmentType1Dto shipmentType1Dto = new ShipmentType1Dto();
+        ShipmentType2Dto shipmentType2Dto = new ShipmentType2Dto();
+        ShipmentType3Dto shipmentType3Dto = new ShipmentType3Dto();
+
         Item item = new Item();
 
         DozerBeanMapper mapper = new DozerBeanMapper();
         List myMappingFiles = new ArrayList();
+
         myMappingFiles.add("dozerMapping.xml");
         mapper.setMappingFiles(myMappingFiles);
 
-        item.setItemId("itemIdIsString");
-        item.setItemName("This is item name");
-        item.setItemPrice(123.32);
+        //map-null
+        // bean factory
+        //date-format
+        //map-empty-string
+        //map-id
+        //relationship-type
+        //stop-on-errors
+        //trim strings
+        //type
+        //wildcard
 
-        shipmentDao.setShipmentId("xyz");
-        shipmentDao.setItemQuantity(2);
-        shipmentDao.setPrice(2332.21);
-        shipmentDao.setSize(299.21);
-        shipmentDao.setItem(item);
+        item.setItemId("ABC123");
+        item.setItemName("itemIdIsString");
+        item.setItemPrice(23);
+        item.setItemType("electronic");
+        item.setRequestID("REQ12345");
+
+        shipmentType1Dto = mapper.map(item, ShipmentType1Dto.class);
+
+        System.out.println(shipmentType1Dto.getShipmentItem());
+        System.out.println(shipmentType1Dto.getItemPrice());
+        System.out.println(shipmentType1Dto.getItemType());
+        System.out.println(shipmentType1Dto.getOwner());
+        System.out.println(shipmentType1Dto.getTax());
+
+
+
+        shipmentType2Dto = mapper.map(item, ShipmentType2Dto.class);
+
+        System.out.println(shipmentType2Dto.getItemId());
+        System.out.println(shipmentType2Dto.getItemPrice());
+        System.out.println(shipmentType2Dto.getItemType());
+        System.out.println(shipmentType2Dto.getItemName());
+        System.out.println(shipmentType2Dto.getTax());
 
         System.out.println("**************************DOZER MAPPING****************************************");
-
-
+    }
+/*
         long start = System.nanoTime();
         for (int ii = 0; ii < iterate; ii++) {
             ShipmentDto shipmentDto = new ShipmentDto();
@@ -94,4 +126,4 @@ public class DozerDemo {
 //        System.out.println(shipmentDto.getSize());
 //        System.out.println(shipmentDto.getOwner());
     }
-}
+    */

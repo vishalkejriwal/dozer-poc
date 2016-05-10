@@ -1,24 +1,21 @@
 package com.vishal.dozer;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * Created by k.vishal on 08/04/16.
+ * Created by aditya.mullela on 06/05/16.
  */
 
-@Getter
 @Setter
+@Getter
 @NoArgsConstructor
-@AllArgsConstructor
-public class Item {
+public class ShipmentType2Dto {
 
-    private String itemId;
     private String itemName;
     private double itemPrice;
     private String itemType;
-    private String requestID;
-
+    private String itemId;
+    private int tax;
 }

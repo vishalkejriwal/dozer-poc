@@ -34,5 +34,42 @@
         </field>
     </mapping>
 
+    <mapping map-null="false">
+        <class-a>com.vishal.dozer.Item</class-a>
+        <class-b>com.vishal.dozer.ShipmentType1Dto</class-b>
+        <field custom-converter-param="${CUST_ID}">
+            <a>itemName</a>
+            <b>itemName</b>
+        </field>
+        <field>
+            <a>itemId</a>
+            <b>shipmentItem</b>
+        </field>
+        <field>
+            <a>itemPrice</a>
+            <b>itemPrice</b>
+        </field>
+        <field>
+            <a>itemType</a>
+            <b>itemType</b>
+        </field>
+    </mapping>
+
+    <mapping >
+        <class-a>com.vishal.dozer.Item</class-a>
+        <class-b>com.vishal.dozer.ShipmentType2Dto</class-b>
+        <field custom-converter-param="${CUST_ID}">
+            <a>itemName</a>
+            <b>itemName</b>
+        </field>
+        <field>
+            <a>itemPrice</a>
+            <b>itemPrice</b>
+        </field>
+        <field>
+            <a>itemType</a>
+            <b>itemType</b>
+        </field>
+    </mapping>
 
 </mappings>

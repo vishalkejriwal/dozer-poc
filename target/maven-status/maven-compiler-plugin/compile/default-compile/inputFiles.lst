@@ -1,4 +1,9 @@
-/Users/k.vishal/flipkart/dozer-demo/src/main/java/com/vishal/dozer/Item.java
-/Users/k.vishal/flipkart/dozer-demo/src/main/java/com/vishal/dozer/DozerDemo.java
-/Users/k.vishal/flipkart/dozer-demo/src/main/java/com/vishal/dozer/ShipmentDao.java
-/Users/k.vishal/flipkart/dozer-demo/src/main/java/com/vishal/dozer/ShipmentDto.java
+/Users/aditya.mullela/git/conditionalMappingPOC/dozer-poc/src/main/java/com/vishal/dozer/Item.java
+/Users/aditya.mullela/git/conditionalMappingPOC/dozer-poc/src/main/java/com/vishal/dozer/ShipmentType1Dto.java
+/Users/aditya.mullela/git/conditionalMappingPOC/dozer-poc/src/main/java/com/vishal/dozer/DozerDemo.java
+/Users/aditya.mullela/git/conditionalMappingPOC/dozer-poc/src/main/java/com/vishal/dozer/MapStructMapper.java
+/Users/aditya.mullela/git/conditionalMappingPOC/dozer-poc/src/main/java/com/vishal/dozer/ShipmentDao.java
+/Users/aditya.mullela/git/conditionalMappingPOC/dozer-poc/src/main/java/com/vishal/dozer/ShipmentType2Dto.java
+/Users/aditya.mullela/git/conditionalMappingPOC/dozer-poc/src/main/java/com/vishal/dozer/ShipmentType3Dto.java
+/Users/aditya.mullela/git/conditionalMappingPOC/dozer-poc/src/main/java/com/vishal/dozer/MapStructDemo.java
+/Users/aditya.mullela/git/conditionalMappingPOC/dozer-poc/src/main/java/com/vishal/dozer/ShipmentDto.java

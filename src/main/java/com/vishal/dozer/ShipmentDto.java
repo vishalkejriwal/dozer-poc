@@ -19,4 +19,5 @@ public class ShipmentDto {
     private String itemId;
     private String itemPrice;
     private String itemName;
+    private String itemType;
 }
